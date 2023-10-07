@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.card {
+  background: linear-gradient(to bottom, #20252e, #191e27);
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.card.before .star {
+  background-color: #282e37;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.before .star img {
+  width: 17px;
+}
+
+.card.before .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+h1 {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+p {
+  color: var(--medium-grey);
+  font-size: 15px;
+}
+
+.card.before ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.card.before li {
+  background-color: #282e37;
+  color: var(--medium-grey);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.card.before button {
+  background-color: var(--orange);
+  width: -webkit-fill-available;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.card.before button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.card.before li:hover {
+  background-color: var(--light-grey);
+  color: white;
+}
+
+.card.before li.selected {
+  background-color: var(--orange);
+  color: white;
+}
+
+.card.after {
+  align-items: center;
+  display: none;
+  min-height: 395px;
+}
+
+.card.after .selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282e37;
+  padding: 8px 20px;
+  border-radius: 20px;
+}
+
+.card.after .selected p {
+  color: var(--orange);
+}
+
+.card.after .content {
+  text-align: center;
+}
