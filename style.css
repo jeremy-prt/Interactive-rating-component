@@ -123,6 +123,7 @@ p {
   align-items: center;
   display: none;
   min-height: 395px;
+    animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
 .card.after .selected {
@@ -136,6 +137,16 @@ p {
 
 .card.after .selected p {
   color: var(--orange);
+}
+
+@keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .card.after .content {
